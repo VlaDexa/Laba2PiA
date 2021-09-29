@@ -1,0 +1,13 @@
+C:\Users\m2108502\Laba2PiA\LabaTwo\bin\Debug\netcoreapp3.1\LabaTwo.exe
+C:\Users\m2108502\Laba2PiA\LabaTwo\bin\Debug\netcoreapp3.1\LabaTwo.deps.json
+C:\Users\m2108502\Laba2PiA\LabaTwo\bin\Debug\netcoreapp3.1\LabaTwo.runtimeconfig.json
+C:\Users\m2108502\Laba2PiA\LabaTwo\bin\Debug\netcoreapp3.1\LabaTwo.runtimeconfig.dev.json
+C:\Users\m2108502\Laba2PiA\LabaTwo\bin\Debug\netcoreapp3.1\LabaTwo.dll
+C:\Users\m2108502\Laba2PiA\LabaTwo\bin\Debug\netcoreapp3.1\LabaTwo.pdb
+C:\Users\m2108502\Laba2PiA\LabaTwo\obj\Debug\netcoreapp3.1\LabaTwo.csprojAssemblyReference.cache
+C:\Users\m2108502\Laba2PiA\LabaTwo\obj\Debug\netcoreapp3.1\LabaTwo.AssemblyInfoInputs.cache
+C:\Users\m2108502\Laba2PiA\LabaTwo\obj\Debug\netcoreapp3.1\LabaTwo.AssemblyInfo.cs
+C:\Users\m2108502\Laba2PiA\LabaTwo\obj\Debug\netcoreapp3.1\LabaTwo.csproj.CoreCompileInputs.cache
+C:\Users\m2108502\Laba2PiA\LabaTwo\obj\Debug\netcoreapp3.1\LabaTwo.dll
+C:\Users\m2108502\Laba2PiA\LabaTwo\obj\Debug\netcoreapp3.1\LabaTwo.pdb
+C:\Users\m2108502\Laba2PiA\LabaTwo\obj\Debug\netcoreapp3.1\LabaTwo.genruntimeconfig.cache
