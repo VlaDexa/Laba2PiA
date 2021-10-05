@@ -17,10 +17,12 @@ namespace LabaTwo
                 if (x <= -1)
                 {
                     y = 1;
-                } else if (x < 1)
+                }
+                else if (x < 1)
                 {
                     y = -x;
-                } else
+                }
+                else
                 {
                     y = -1;
                 }
@@ -30,11 +32,11 @@ namespace LabaTwo
             // Задание 1
             {
                 double r = 2;
-                (double, double)[] coords = { (0, 2), (1.5, 0.7), (1,1), (3,0) };
+                (double, double)[] coords = { (0, 2), (1.5, 0.7), (1, 1), (3, 0) };
                 foreach (var coord in coords)
                 {
                     var (x, y) = coord;
-                    bool placed = Math.Abs(x * x + y * y - r * r) <= Math.Pow(10,-3);
+                    bool placed = Math.Abs(x * x + y * y - r * r) <= Math.Pow(10, -3);
                     Console.WriteLine("Точка с координатой {0}{1} лежит на окружности", coord, placed ? "" : " не");
                 }
             }
@@ -50,6 +52,66 @@ namespace LabaTwo
             }
             Console.WriteLine();
             // 2 часть
+            // Задание 10
+            {
+                int n = 5;
+                string[][] marks = { new string[4] { "3", "4", "5", "4" }, new string[4] { "4", "5", "4", "5" }, new string[4] { "2", "3", "5", "3" }, new string[4] { "5", "4", "5", "5" }, new string[4] { "3", "3", "4", "3" } };
+                int good = 0;
+                for (int i = 0; i < n; ++i)
+                {
+                    foreach (string mark in marks[i])
+                    {
+                        if (mark == "2" || mark == "3")
+                            goto Next;
+                    };
+                    ++good;
+                Next:;
+                }
+                Console.WriteLine("Учеников без 2 или 3 - {0}", good);
+            }
+            Console.WriteLine();
+            // Задание 11
+            {
+                int n = 5;
+                string[][] init_marks = { new string[4] { "3", "4", "5", "4" }, new string[4] { "4", "5", "4", "5" }, new string[4] { "2", "3", "5", "3" }, new string[4] { "5", "4", "5", "5" }, new string[4] { "3", "3", "4", "3" } };
+                int bad = 0;
+                List<int> marks = new List<int>(n * 4);
+                for (int i = 0; i < n; ++i)
+                {
+                    foreach (string mark in init_marks[i])
+                    {
+                        marks.Add(int.Parse(mark));
+                        if (mark == "2" || mark == "3")
+                        {
+                            ++bad;
+                            break;
+                        }
+                    }
+                }
+                Console.WriteLine("Количество неуспевающих студентов - {0}", bad);
+                Console.WriteLine("Средний балл группы - {0}", marks.Sum() / ((double)n * 4));
+            }
+            Console.WriteLine();
+            // Задание 12
+            {
+                int n = 5;
+                double[] rads = { 3.5, 5.75, 3.56, 6, 2.25 };
+                int[] modes = { 1, 2, 3, 2, 1 };
+                for (int i = 0; i < n; ++i)
+                {
+                    double r = rads[i];
+                    int mode = modes[i];
+                    double answer = mode switch
+                    {
+                        1 => AreaCalculator.Square(r),
+                        2 => AreaCalculator.Circle(r),
+                        3 => AreaCalculator.EqualSidesTriangle(r),
+                    };
+                    Console.WriteLine("Ваш ответ - {0}", answer);
+                }
+            }
+            Console.WriteLine();
+            // 3 часть
             // Задание 10
             {
                 Console.Write("Количество учеников - ");
@@ -88,18 +150,18 @@ namespace LabaTwo
                         }
                 }
                 Console.WriteLine("Количество неуспевающих студентов - {0}", bad);
-                Console.WriteLine("Средний балл группы - {0}", marks.Sum()/((double)n*4));
+                Console.WriteLine("Средний балл группы - {0}", marks.Sum() / ((double)n * 4));
             }
             Console.WriteLine();
             // Задание 12
             {
-                Console.Write("Количество учеников - ");
+                Console.Write("Количество значений - ");
                 int n = int.Parse(Console.ReadLine());
                 for (int i = 0; i < n; ++i)
                 {
                     Console.Write("Введите значение r - ");
                     double r = double.Parse(Console.ReadLine());
-                    Console.Write("Введите 1, чтобы получить площадь квадрата со стороной r, 2 - чтобы получить площадь круга радиусом r, 3 - чтобы получить площадь равностороннего треугольника ");
+                    Console.Write("Введите 1, чтобы получить площадь квадрата со стороной r, 2 - чтобы получить площадь круга радиусом r, 3 - чтобы получить площадь равностороннего треугольника - ");
                     int mode = int.Parse(Console.ReadLine());
                     double answer = mode switch
                     {
@@ -111,44 +173,6 @@ namespace LabaTwo
                     Console.WriteLine("Ваш ответ - {0}", answer);
                 }
             }
-            Console.WriteLine();
-            // 3 часть
-            // Задание 10
-            {
-                int good = 0;
-                var students = ReadConsoleToEnd()
-                                   .TrimEnd()
-                                   .Split("\n")
-                                   .Select((s) => s.TrimEnd()
-                                                   .Split(" "));
-                foreach (string[] marks in students){
-                    foreach (string mark in marks)
-                    {
-                        if (mark == "2" || mark == "3")
-                            goto Next;
-                    };
-                    ++good;
-                Next:;
-                }
-                Console.WriteLine("Учеников без 2 или 3 - {0}", good);
-            }
-        }
-
-        /**
-         * <summary>Читает вводимые данные из консоли, пока они не кончатся</summary>
-         * <exception cref="System.IO.IOException"></exception>
-         * <exception cref="ArgumentNullException"></exception>
-         * <returns>Все прочитанные данные в виде <see cref="System.String"/></returns>
-         */
-        private static string ReadConsoleToEnd()
-        {
-            string buf = "";
-            int inp;
-            while ((inp = Console.Read()) != -1)
-            {
-                buf += (char)inp;
-            }
-            return buf;
         }
     }
 
