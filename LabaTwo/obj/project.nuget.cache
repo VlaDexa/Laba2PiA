@@ -1,10 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZL8fAs5Quyg8SWCIgKS76QniG8Fdni7lgDPhjG3JdTaWYqi5ll4V8jwKGGfA/qRDWDwkei40tmMMXU1WJFgu/Q==",
+  "dgSpecHash": "wMg4l1mls2RkFJwjJWWKkXUYxnEKkB49cCESEG4Y9mnh1WBqiP1MuV3EpgRwEmllZIZdyAxGhFzXDQo9Jye6aA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\m2108502\\Laba2PiA\\LabaTwo\\LabaTwo.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\m2108502\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.13\\microsoft.netcore.app.host.win-x64.3.1.13.nupkg.sha512"
-  ],
+  "projectFilePath": "C:\\Users\\vgrec\\source\\repos\\VlaDexa\\Laba2PiA\\LabaTwo\\LabaTwo.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }

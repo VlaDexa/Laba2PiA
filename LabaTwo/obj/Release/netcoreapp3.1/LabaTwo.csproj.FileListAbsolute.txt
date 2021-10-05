@@ -11,3 +11,16 @@ C:\Users\m2108502\Laba2PiA\LabaTwo\obj\Release\netcoreapp3.1\LabaTwo.csproj.Core
 C:\Users\m2108502\Laba2PiA\LabaTwo\obj\Release\netcoreapp3.1\LabaTwo.dll
 C:\Users\m2108502\Laba2PiA\LabaTwo\obj\Release\netcoreapp3.1\LabaTwo.pdb
 C:\Users\m2108502\Laba2PiA\LabaTwo\obj\Release\netcoreapp3.1\LabaTwo.genruntimeconfig.cache
+C:\Users\vgrec\source\repos\VlaDexa\Laba2PiA\LabaTwo\bin\Release\netcoreapp3.1\LabaTwo.exe
+C:\Users\vgrec\source\repos\VlaDexa\Laba2PiA\LabaTwo\bin\Release\netcoreapp3.1\LabaTwo.deps.json
+C:\Users\vgrec\source\repos\VlaDexa\Laba2PiA\LabaTwo\bin\Release\netcoreapp3.1\LabaTwo.runtimeconfig.json
+C:\Users\vgrec\source\repos\VlaDexa\Laba2PiA\LabaTwo\bin\Release\netcoreapp3.1\LabaTwo.runtimeconfig.dev.json
+C:\Users\vgrec\source\repos\VlaDexa\Laba2PiA\LabaTwo\bin\Release\netcoreapp3.1\LabaTwo.dll
+C:\Users\vgrec\source\repos\VlaDexa\Laba2PiA\LabaTwo\bin\Release\netcoreapp3.1\LabaTwo.pdb
+C:\Users\vgrec\source\repos\VlaDexa\Laba2PiA\LabaTwo\obj\Release\netcoreapp3.1\LabaTwo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vgrec\source\repos\VlaDexa\Laba2PiA\LabaTwo\obj\Release\netcoreapp3.1\LabaTwo.AssemblyInfoInputs.cache
+C:\Users\vgrec\source\repos\VlaDexa\Laba2PiA\LabaTwo\obj\Release\netcoreapp3.1\LabaTwo.AssemblyInfo.cs
+C:\Users\vgrec\source\repos\VlaDexa\Laba2PiA\LabaTwo\obj\Release\netcoreapp3.1\LabaTwo.csproj.CoreCompileInputs.cache
+C:\Users\vgrec\source\repos\VlaDexa\Laba2PiA\LabaTwo\obj\Release\netcoreapp3.1\LabaTwo.dll
+C:\Users\vgrec\source\repos\VlaDexa\Laba2PiA\LabaTwo\obj\Release\netcoreapp3.1\LabaTwo.pdb
+C:\Users\vgrec\source\repos\VlaDexa\Laba2PiA\LabaTwo\obj\Release\netcoreapp3.1\LabaTwo.genruntimeconfig.cache
