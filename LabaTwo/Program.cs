@@ -56,13 +56,17 @@ namespace LabaTwo
                 int good = 0;
                 for (int i = 0; i < n; ++i)
                 {
+                    bool good_s = true;
                     foreach (string mark in marks[i])
                     {
                         if (mark == "2" || mark == "3")
-                            goto Next;
+                        {
+                            good_s = false;
+                            break;
+                        }
                     };
-                    ++good;
-                Next:;
+                    if (good_s)
+                        ++good;
                 }
                 Console.WriteLine("Учеников без 2 или 3 - {0}", good);
             }
@@ -100,9 +104,9 @@ namespace LabaTwo
                     int mode = modes[i];
                     double answer = mode switch
                     {
-                        1 => AreaCalculator.Square(r),
-                        2 => AreaCalculator.Circle(r),
-                        3 => AreaCalculator.EqualSidesTriangle(r),
+                        1 => r * r,
+                        2 => Math.PI * r * r,
+                        3 => Math.Sqrt(3) / 4 * r * r,
                         _ => throw new ArgumentOutOfRangeException("Unreachable"),
                     };
                     Console.WriteLine("Ваш ответ - {0}", answer);
@@ -117,14 +121,18 @@ namespace LabaTwo
                 int good = 0;
                 for (int i = 0; i < n; ++i)
                 {
+                    bool good_s = true;
                     Console.Write("Введите 4 оценки через пробел - ");
                     foreach (string mark in Console.ReadLine().Split(" "))
                     {
                         if (mark == "2" || mark == "3")
-                            goto Next;
+                        {
+                            good_s = false;
+                            break;
+                        }
                     };
-                    ++good;
-                Next:;
+                    if (good_s)
+                        ++good;
                 }
                 Console.WriteLine("Учеников без 2 или 3 - {0}", good);
             }
@@ -163,50 +171,14 @@ namespace LabaTwo
                     int mode = int.Parse(Console.ReadLine());
                     double answer = mode switch
                     {
-                        1 => AreaCalculator.Square(r),
-                        2 => AreaCalculator.Circle(r),
-                        3 => AreaCalculator.EqualSidesTriangle(r),
+                        1 => r * r,
+                        2 => Math.PI * r * r,
+                        3 => Math.Sqrt(3) / 4 * r * r,
                         _ => throw new ArgumentOutOfRangeException("Нет такого действия"),
                     };
                     Console.WriteLine("Ваш ответ - {0}", answer);
                 }
             }
-        }
-    }
-
-    /**
-     *<summary>Считает площади разных фигур</summary> 
-     */
-    class AreaCalculator
-    {
-        /**
-         * <summary>Считает площадь квадрата</summary>
-         * <param name="r">Длина стороны квадрата</param>
-         * <returns>Площадь треугольника с радиусом r</returns>
-         */
-        public static double Square(double r)
-        {
-            return r * r;
-        }
-
-        /**
-         * <summary>Считает площадь круга</summary>
-         * <param name="r">Радиус круга</param>
-         * <returns>Площадь круга с радиусом r</returns>
-         */
-        public static double Circle(double r)
-        {
-            return Math.PI * r * r;
-        }
-
-        /**
-         * <summary>Считает площадь равностороннего треугольника</summary>
-         * <param name="r">Длина стороны треугольника</param>
-         * <returns>Площадь равносторонего треугольника с радиусом r</returns>
-         */
-        public static double EqualSidesTriangle(double r)
-        {
-            return (Math.Sqrt(3) / 4) * r * r;
         }
     }
 }
