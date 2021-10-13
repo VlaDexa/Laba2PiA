@@ -43,19 +43,16 @@ namespace LabaTwo
             Console.WriteLine();
             // Задание 2
             {
-                Console.Write("Введите координату x - ");
-                double x = double.Parse(Console.ReadLine());
-                Console.Write("Введите координату y - ");
-                double y = double.Parse(Console.ReadLine());
+                var (x, y) = (-1.5, 0.6); 
                 bool placed = y >= 0 && y + Math.Abs(x) <= 1;
-                Console.WriteLine("Ваша точка{0} лежит внутри треугольника", placed ? "" : " не");
+                Console.WriteLine("Точка {0}{1} лежит внутри треугольника", (x,y) ,placed ? "" : " не");
             }
             Console.WriteLine();
             // 2 часть
             // Задание 10
             {
-                int n = 5;
-                string[][] marks = { new string[4] { "3", "4", "5", "4" }, new string[4] { "4", "5", "4", "5" }, new string[4] { "2", "3", "5", "3" }, new string[4] { "5", "4", "5", "5" }, new string[4] { "3", "3", "4", "3" } };
+                const int n = 5;
+                string[][] marks = new string[n][]{ new string[4] { "3", "4", "5", "4" }, new string[4] { "4", "5", "4", "5" }, new string[4] { "2", "3", "5", "3" }, new string[4] { "5", "4", "5", "5" }, new string[4] { "3", "3", "4", "3" } };
                 int good = 0;
                 for (int i = 0; i < n; ++i)
                 {
@@ -72,8 +69,8 @@ namespace LabaTwo
             Console.WriteLine();
             // Задание 11
             {
-                int n = 5;
-                string[][] init_marks = { new string[4] { "3", "4", "5", "4" }, new string[4] { "4", "5", "4", "5" }, new string[4] { "2", "3", "5", "3" }, new string[4] { "5", "4", "5", "5" }, new string[4] { "3", "3", "4", "3" } };
+                const int n = 5;
+                string[][] init_marks = new string[n][]{ new string[4] { "3", "4", "5", "4" }, new string[4] { "4", "5", "4", "5" }, new string[4] { "2", "3", "5", "3" }, new string[4] { "5", "4", "5", "5" }, new string[4] { "3", "3", "4", "3" } };
                 int bad = 0;
                 List<int> marks = new List<int>(n * 4);
                 for (int i = 0; i < n; ++i)
@@ -94,9 +91,9 @@ namespace LabaTwo
             Console.WriteLine();
             // Задание 12
             {
-                int n = 5;
-                double[] rads = { 3.5, 5.75, 3.56, 6, 2.25 };
-                int[] modes = { 1, 2, 3, 2, 1 };
+                const int n = 5;
+                double[] rads = new double[n]{ 3.5, 5.75, 3.56, 6, 2.25 };
+                int[] modes = new int[n]{ 1, 2, 3, 2, 1 };
                 for (int i = 0; i < n; ++i)
                 {
                     double r = rads[i];
@@ -106,6 +103,7 @@ namespace LabaTwo
                         1 => AreaCalculator.Square(r),
                         2 => AreaCalculator.Circle(r),
                         3 => AreaCalculator.EqualSidesTriangle(r),
+                        _ => throw new ArgumentOutOfRangeException("Unreachable"),
                     };
                     Console.WriteLine("Ваш ответ - {0}", answer);
                 }
